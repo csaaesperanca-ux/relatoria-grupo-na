@@ -1,5 +1,6 @@
 ﻿import React, { useState } from 'react';
 import { MeetingForm } from './components/MeetingForm';
+import { ReportsView } from './components/ReportsView';
 import { PlusCircle, Layers, FileSpreadsheet } from 'lucide-react';
 
 export function App() {
@@ -10,6 +11,7 @@ export function App() {
 
   const handleSuccess = () => {
     setSuccessMessage(true);
+    setActiveTab('relatorios');
     setTimeout(() => setSuccessMessage(false), 4000);
   };
 
@@ -85,13 +87,11 @@ export function App() {
         )}
         {activeTab === 'servico' && (
           <div className="bg-white p-8 rounded-xl text-center border text-slate-500">
-            Módulo de Reunião Administrativa e Autoexame.
+            Módulo de Reunião Administrativa e Autoexame (Próxima etapa).
           </div>
         )}
         {activeTab === 'relatorios' && (
-          <div className="bg-white p-8 rounded-xl text-center border text-slate-500">
-            Módulo de Relatórios e Livro-Caixa.
-          </div>
+          <ReportsView />
         )}
       </main>
     </div>
