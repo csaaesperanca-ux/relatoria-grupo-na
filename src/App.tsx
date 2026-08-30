@@ -1,6 +1,7 @@
 ﻿import React, { useState } from 'react';
 import { MeetingForm } from './components/MeetingForm';
 import { ReportsView } from './components/ReportsView';
+import { NALogo } from './components/NALogo';
 import { PlusCircle, Layers, FileSpreadsheet } from 'lucide-react';
 
 export function App() {
@@ -21,11 +22,7 @@ export function App() {
       <header className="bg-slate-900 text-white shadow-md">
         <div className="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <img 
-              src="/na-logo.svg" 
-              alt="NA Logo" 
-              className="w-8 h-8 object-contain"
-            />
+            <NALogo className="w-8 h-8 text-amber-500" />
             <div>
               <h1 className="font-bold text-sm tracking-wide">Relatoria NA</h1>
               <p className="text-[11px] text-slate-400">Atas e Relatórios de Grupo</p>
@@ -87,7 +84,7 @@ export function App() {
         )}
         {activeTab === 'servico' && (
           <div className="bg-white p-8 rounded-xl text-center border text-slate-500">
-            Módulo de Reunião Administrativa e Autoexame (Próxima etapa).
+            Módulo de Reunião Administrativa e Autoexame.
           </div>
         )}
         {activeTab === 'relatorios' && (
