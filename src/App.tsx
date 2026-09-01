@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import { useState } from 'react';
 import { MeetingForm } from './components/MeetingForm';
 import { ReportsView } from './components/ReportsView';
 import { NALogo } from './components/NALogo';
